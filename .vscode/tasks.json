@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build with OpenCV",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-I/usr/include/opencv4",
+                "*.cpp",
+                "-o",
+                "main",
+                "-lopencv_core",
+                "-lopencv_highgui",
+                "-lopencv_imgproc",
+                "-lopencv_imgcodecs"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": "$gcc"
+        }
+    ]
+}

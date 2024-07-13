@@ -1,0 +1,28 @@
+
+# Ignore arquivos de backup
+*~
+*.bak
+
+# Ignore arquivos compilados
+*.o
+*.obj
+
+# Ignore bibliotecas compiladas
+*.dll
+*.so
+*.dylib
+
+# Ignore executáveis
+*.exe
+*.out
+
+# Ignore arquivos temporários do sistema
+*.swp
+*.swo
+.DS_Store
+
+# Ignore arquivos de log
+*.log
+
+# Ignore arquivos .PDF
+*.pdf

@@ -1,0 +1,3 @@
+/home/franss/Área de trabalho/so/processos/build/CMakeFiles/main.dir
+/home/franss/Área de trabalho/so/processos/build/CMakeFiles/edit_cache.dir
+/home/franss/Área de trabalho/so/processos/build/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/franss/Área de trabalho/so/processos/build",
+  "command": "/usr/bin/c++  -I\"/home/franss/Área de trabalho/so/processos/include\" -isystem /usr/include/opencv4  -std=c++11 -Wall -g -o CMakeFiles/main.dir/src/main.cpp.o -c \"/home/franss/Área de trabalho/so/processos/src/main.cpp\"",
+  "file": "/home/franss/Área de trabalho/so/processos/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/franss/Área de trabalho/so/processos/build",
+  "command": "/usr/bin/c++  -I\"/home/franss/Área de trabalho/so/processos/include\" -isystem /usr/include/opencv4  -std=c++11 -Wall -g -o CMakeFiles/main.dir/src/operations.cpp.o -c \"/home/franss/Área de trabalho/so/processos/src/operations.cpp\"",
+  "file": "/home/franss/Área de trabalho/so/processos/src/operations.cpp",
+  "output": "CMakeFiles/main.dir/src/operations.cpp.o"
+}
+]
