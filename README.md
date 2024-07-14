@@ -167,7 +167,7 @@ sudo apt install cmake #instala: cmake
 
 ## Compilação e Execução
 
-Dentro da pasta do projeto, chamada `/processos`, utilize o comando `make` na bash para compilar e executar o programa.
+Dentro da pasta do projeto, chamada `/threads`, utilize o comando `make` na bash para compilar e executar o programa.
 ```bash
 make
 ```
