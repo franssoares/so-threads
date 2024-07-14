@@ -1,3 +1,15 @@
+``` txt
+    Autor: Franklin Luiz Soares do Nascimento Filho
+    E-mail: franklin.soares.701@ufrn.edu.br
+    Data: 5 de jul 2:23
+
+    Instituição: Universidade Federal do Rio Grande do Norte (UFRN)
+    Disciplina: DCA0108 – Sistemas Operacionais
+    Turma: 01, 2024.1
+    Horário: 24M12
+```
+
+
 # Detecção de Bordas em Imagens Digitais com Threads POSIX
 
 ## Contextualização
@@ -125,6 +137,11 @@ Script Bash utilizado para verificar as dependências necessárias para o projet
 
 O Makefile define regras para automatizar a compilação, execução e limpeza do projeto. Ele utiliza o CMake para configurar e compilar o projeto (`build`), verifica as dependências (`check_dependencies`), executa o projeto compilado (`run`) e limpa os arquivos gerados (`clean`).
 
+### Arquivos de Código Fonte
+Os arquivos de código fonte são: `main.cpp`, `operations.cpp` e `operations.h`. 
+- Os arquivos `.cpp` são encontrados [aqui](https://github.com/franssoares/so-threads/tree/main/src), 
+- O arquivo `.h` pode ser encontrado [aqui](https://github.com/franssoares/so-threads/tree/main/include).
+
 ----
 
 ## Instalação das Dependências
@@ -139,7 +156,11 @@ sudo apt-get install build-essential #instala: gcc/g++, cmake, pthreads...
 ```
 ou
 ```bash
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install libopencv-dev #instala: opencv
 sudo apt-get install libpthread-stubs0-dev #instala: pthreads
+sudo apt install cmake #instala: cmake
 ```
 
 **Obs:** Certifique que as instalações estejam nos caminhos: `/usr/lib/x86_64-linux-gnu/libopencv_core.so`  e `/usr/lib/x86_64-linux-gnu/libpthread.so.0`
@@ -172,4 +193,4 @@ Ao executar `make`, usamos a funcionalidade `all` que segue as funções do Make
 3. [Processos no Unix](https://www.dca.ufrn.br/~adelardo/cursos/DCA409/node28.html)
 4. [Imagens PGM](https://netpbm.sourceforge.net/doc/pgm.html#plainpgm)
 
-**Obs:** Este arquivo contém todas as seções necessárias para entender, implementar e executar seu projeto de detecção de bordas em imagens digitais usando processos POSIX no ambiente Linux.
+**Obs:** Este arquivo contém todas as seções necessárias para entender, implementar e executar o projeto de detecção de bordas em imagens digitais usando processos POSIX no ambiente Linux.
