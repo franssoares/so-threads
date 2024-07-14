@@ -1,7 +1,7 @@
 CMakeFiles/main.dir/src/operations.cpp.o: \
- /home/franss/Área\ de\ trabalho/so/processos/src/operations.cpp \
+ /home/franss/Área\ de\ trabalho/so/threads/src/operations.cpp \
  /usr/include/stdc-predef.h \
- /home/franss/Área\ de\ trabalho/so/processos/src/../include/operations.h \
+ /home/franss/Área\ de\ trabalho/so/threads/src/../include/operations.h \
  /usr/include/opencv4/opencv2/opencv.hpp \
  /usr/include/opencv4/opencv2/opencv_modules.hpp \
  /usr/include/opencv4/opencv2/core.hpp \

@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/franss/\u00c1rea de trabalho/so/processos/build"
+			"value" : "/home/franss/\u00c1rea de trabalho/so/threads/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -547,7 +547,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/franss/\u00c1rea de trabalho/so/processos/build/CMakeFiles/pkgRedirects"
+			"value" : "/home/franss/\u00c1rea de trabalho/so/threads/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -607,7 +607,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/home/franss/\u00c1rea de trabalho/so/processos"
+			"value" : "/home/franss/\u00c1rea de trabalho/so/threads"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -851,7 +851,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "processos"
+			"value" : "tarefas"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1186,7 +1186,7 @@
 			"value" : "TRUE"
 		},
 		{
-			"name" : "processos_BINARY_DIR",
+			"name" : "tarefas_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1195,10 +1195,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/franss/\u00c1rea de trabalho/so/processos/build"
+			"value" : "/home/franss/\u00c1rea de trabalho/so/threads/build"
 		},
 		{
-			"name" : "processos_IS_TOP_LEVEL",
+			"name" : "tarefas_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1210,7 +1210,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "processos_SOURCE_DIR",
+			"name" : "tarefas_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1219,7 +1219,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/home/franss/\u00c1rea de trabalho/so/processos"
+			"value" : "/home/franss/\u00c1rea de trabalho/so/threads"
 		}
 	],
 	"kind" : "cache",

@@ -1,4 +1,4 @@
-# Detecção de Bordas em Imagens Digitais com Processos POSIX
+# Detecção de Bordas em Imagens Digitais com Threads POSIX
 
 ## Contextualização
 
@@ -67,11 +67,20 @@ fim-
 
 Elaborar um programa em `C/C++` para um sistema `POSIX` (Linux), utilizando `GCC/G++`:
 
-**1.** Criar um processo pai que abre uma imagem em nível de cinza e cria uma matriz representando essa imagem.
-**2.** Utilizar `fork()` para criar um processo filho que calcula as bordas na direção `x` da imagem, salvando o resultado na matriz `Rx`.
-**3.** Utilizar `fork()` novamente para criar outro filho que calcula as bordas na direção `y`, salvando o resultado na matriz `Ry`.
-**4.** O processo pai deve esperar pela conclusão dos filhos e combinar `Rx` e `Ry` para formar a matriz `R`.
-**5.** Salvar a matriz `R` como uma nova imagem de saída.
+**1.** Criar um processo que lance uma thread mãe para fazer a abertura de uma imagem em nível de cinza:
+- A thread mãe será responsável por carregar uma imagem em nível de cinza e criar as estruturas de dados necessárias para representá-la, como matrizes globais.
+  
+**2.** thread mãe deverá criar duas threads filhas:
+- Uma thread será responsável por calcular as bordas na direção x da imagem, armazenando o resultado na matriz global Rx.
+- A outra thread calculará as bordas na direção y da imagem, armazenando o resultado na matriz global Ry.
+- Para garantir sincronização e evitar o encerramento precoce das threads filhas, a thread mãe deverá esperar pelas threads filhas utilizando o comando join().
+  
+**3.** Após a execução das threads filhas:
+
+- A thread mãe utilizará as informações das matrizes Rx e Ry para combinar essas informações e gerar a matriz R com as bordas completas.
+- O resultado final, matriz R, será salvo como uma nova imagem.
+
+Este formato destaca os passos necessários para implementar um programa que utiliza threads para processamento de imagem em um ambiente POSIX, garantindo que o processo pai coordene as operações das threads mãe e filhas para completar a detecção de bordas de forma eficiente e sincronizada.
 
 # Sobre o Programa
 

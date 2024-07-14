@@ -26,4 +26,4 @@ clean:
 	rm -rf build bin
 	cd imgs && rm -f *.png
 
-.PHONY: all build run clean
+.PHONY: all check_dependencies clean build run

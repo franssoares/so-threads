@@ -1,4 +1,4 @@
-# Install script for directory: /home/franss/Área de trabalho/so/processos
+# Install script for directory: /home/franss/Área de trabalho/so/threads
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/franss/Área de trabalho/so/processos/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/franss/Área de trabalho/so/threads/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

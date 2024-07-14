@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.5)
-project(processos)
+cmake_minimum_required(VERSION 3.20)
+project(tarefas)
 
 # Especifica a localização dos arquivos de cabeçalho do OpenCV
 find_package(OpenCV REQUIRED)
