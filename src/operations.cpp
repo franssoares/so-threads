@@ -42,9 +42,9 @@ void* carregarImagem(void* arg) {
     int cols = image.cols;
 
     // Inicializa as matrizes Rx, Ry e R com as dimensões da imagem
-    Rx = Mat(rows, cols, CV_8UC1); // 8U -> uint de 8bits, C1 -> 1 canal (grayscale)
-    Ry = Mat(rows, cols, CV_8UC1);
-    R = Mat(rows, cols, CV_8UC1);
+    Rx = cv::Mat::zeros(rows, cols, CV_8UC1); // 8U -> uint de 8bits, C1 -> 1 canal (grayscale)
+    Ry = cv::Mat::zeros(rows, cols, CV_8UC1);
+    R = cv::Mat::zeros(rows, cols, CV_8UC1);
 
     // Criar as threads filhas para calcular Rx e Ry
     pthread_create(&threadRx, NULL, calcularRxThread, (void*)&image);
@@ -77,13 +77,20 @@ void* calcularRyThread(void* arg) {
 void calcularRx(const cv::Mat& I, cv::Mat& Rx) {
     int M = I.rows;
     int N = I.cols;
+    int sum;
 
     for (int i = 1; i < M - 1; ++i) {
         for (int j = 1; j < N - 1; ++j) {
-            Rx.at<uchar>(i, j) = static_cast<uchar>(std::abs(
-                (I.at<uchar>(i+1, j-1) + I.at<uchar>(i+1, j) + I.at<uchar>(i+1, j+1)) -
-                (I.at<uchar>(i-1, j-1) + I.at<uchar>(i-1, j) + I.at<uchar>(i-1, j+1))
-            ));
+            sum = (I.at<uchar>(i+1, j-1) + I.at<uchar>(i+1, j) + I.at<uchar>(i+1, j+1)) -
+                    (I.at<uchar>(i-1, j-1) + I.at<uchar>(i-1, j) + I.at<uchar>(i-1, j+1));
+            
+            // Calcula o valor absoluto do gradiente
+            sum = std::abs(sum);
+
+            // Garante que o valor esteja no intervalo [0, 255]
+            sum = std::min(sum, 255);
+
+            Rx.at<uchar>(i, j) = static_cast<uchar>(sum);
         }
     }
 }
@@ -92,13 +99,20 @@ void calcularRx(const cv::Mat& I, cv::Mat& Rx) {
 void calcularRy(const cv::Mat& I, cv::Mat& Ry) {
     int M = I.rows;
     int N = I.cols;
+    int sum;
 
     for (int i = 1; i < M - 1; ++i) {
         for (int j = 1; j < N - 1; ++j) {
-            Ry.at<uchar>(i, j) = static_cast<uchar>(std::abs(
-                (I.at<uchar>(i-1, j+1) + I.at<uchar>(i, j+1) + I.at<uchar>(i+1, j+1)) -
-                (I.at<uchar>(i-1, j-1) + I.at<uchar>(i, j-1) + I.at<uchar>(i+1, j-1))
-            ));
+            sum = (I.at<uchar>(i-1, j+1) + I.at<uchar>(i, j+1) + I.at<uchar>(i+1, j+1)) -
+                (I.at<uchar>(i-1, j-1) + I.at<uchar>(i, j-1) + I.at<uchar>(i+1, j-1));
+            
+            // Calcula o valor absoluto do gradiente
+            sum = std::abs(sum);
+
+            // Garante que o valor esteja no intervalo [0, 255]
+            sum = std::min(sum, 255);
+
+            Ry.at<uchar>(i, j) = static_cast<uchar>(sum);
         }
     }
 }
